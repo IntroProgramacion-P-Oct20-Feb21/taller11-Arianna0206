@@ -18,20 +18,24 @@ public class Ejemplo4 {
      */
     public static void main(String[] args) {
         // 
-        int numeroDatos = 4;
-        int[] informacion = obtenerDatos(numeroDatos);
-        for (int i = 0; i < informacion.length; i++) {
-            System.out.printf("Datos ingresado: %d\n", informacion[i]);
+        Scanner entrada = new Scanner(System.in);
+        int numeroDatos;
+        System.out.println("Ingrese el número de datos");
+        numeroDatos = entrada.nextInt();
+        String[] informacion = obtenerDatos(numeroDatos);
+        for(int i = 0; i < informacion.length; i++) {
+            System.out.printf("Las provincias ingresadas son: %s\n",
+                    informacion[i]);
         }
     }
     
-    public static int[] obtenerDatos(int numero){
+    public static String[] obtenerDatos(int numero){
         Scanner entrada = new Scanner(System.in);
-        int [] arregloResultante = new int[numero];
-        int valor;
+        String [] arregloResultante = new String[numero];
+        String valor;
         for (int i = 0; i < numero; i++) {
-            System.out.println("Ingrese valor");
-            valor = entrada.nextInt();
+            System.out.println("Ingrese una provincia");
+            valor = entrada.nextLine();
             arregloResultante[i] = valor;
         }
         return arregloResultante;

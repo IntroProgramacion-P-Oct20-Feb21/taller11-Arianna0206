@@ -18,6 +18,11 @@ public class Ejemplo3 {
         // 
         int[][] informacion = {{1, 2, 3}, {10, 20, 30}, {100, 200, 300}};
         presentarDiagonal(informacion);
+        //1    2    3
+        //10   20   30
+        //100  200  300
+        //2    3    30
+        //int[] informacion2 = {10, 20, 30};
     }
     
     public static void presentarDiagonal(int [][] datos){
@@ -26,6 +31,7 @@ public class Ejemplo3 {
             for (int j = 0; j < datos[i].length; j++) {
                 if(i==j){
                     cadena = String.format("%s%s\t", cadena, datos[i][j]);
+                    
                 }
             }
         }
